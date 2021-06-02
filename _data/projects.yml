@@ -1,18 +1,20 @@
 - title: "Árbol AVL"
   slug: avl-tree
-  img_type: "webp:image/webp,png:image/png"
+  image: projects/avl-tree
+  image_types: "webp:image/webp,png:image/png"
   description: >-
     Implementación de Árbol Binario de Búsqueda (ABB) auto-balanceado.
 
 - title: "Rutas de Laravel en JS"
   slug: laravel-js-routes
-  img_type: "webp:image/webp,png:image/png"
+  image: projects/laravel-js-routes
+  image_types: "webp:image/webp,png:image/png"
   description: >-
     Paquete composer para utilizar rutas de Laravel en archivos
     JS con un comando.
 
-# - title: "Este sitio web y blog personal"
-#   slug: halivert.github.io
-#   img_type: "webp:image/webp,png:image/png"
-#   description: >-
-#     Sitio web hecho con Jekyll, HTML, JavaScript y CSS.
+- title: "Este sitio web y blog personal"
+  slug: projects/website
+  image_types: "webp:image/webp,png:image/png"
+  description: >-
+    Sitio web hecho con Jekyll, HTML, JavaScript y CSS.
