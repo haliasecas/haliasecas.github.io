@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<script type="module">
+			import * as turbo from "https://cdn.skypack.dev/@hotwired/turbo";
+		</script><link rel="stylesheet" href="https://halivert.dev/assets/css/halivert.css" /><link
+				rel="webmention"
+				href="https://webmention.io/halivert.dev/webmention"
+			/>
+			<link rel="pingback" href="https://webmention.io/halivert.dev/xmlrpc" /><link
+			rel="stylesheet"
+			href="https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css" />
+		</noscript>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/print.css"
+			media="print"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/fa.min.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://halivert.dev/assets/css/fa.min.css" />
+		</noscript>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/solarized.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://halivert.dev/assets/css/solarized.css" />
+		</noscript>
+
+		
+<meta property="unix_timestamp" content="1590904200">
+
+<meta property="author:name" content="Halí" />
+				<meta property="telegram:author" content="" />
+			<meta name="telegram:channel" content="@halivertsblog" /><meta name="monetization" content="$ilp.uphold.com/yJJL4YrpRMQi" /><script>
+			window.siteUrl = "https://halivert.dev/"
+		</script>
+		<script type="module" src="https://halivert.dev/assets/js/main.js"></script>
+		<script src="https://unpkg.com/lunr@2.3.9/lunr.min.js" defer></script>
+		<script
+			type="module"
+			src="https://halivert.dev/assets/js/search.js"
+			defer
+		></script>
+		<script
+			type="module"
+			src="https://halivert.dev/assets/js/themeSwitcher.js"
+			defer
+		></script>
+
+		<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Tareas en cola, Laravel (Servidor compartido) | Halivert</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Tareas en cola, Laravel (Servidor compartido)" />
+<meta name="author" content="halivert" />
+<meta property="og:locale" content="es_MX" />
+<meta name="description" content="No quería demasiado retraso en las peticiones que enviaban un correo, así que decidí utilizar el QUEUE_CONNECTION=database en el archivo de configuración (.env) y así comienza ese “largo” camino a usar una cola en Laravel para ciertas tareas que llevan poco más de 1 segundo, en este caso notificaciones." />
+<meta property="og:description" content="No quería demasiado retraso en las peticiones que enviaban un correo, así que decidí utilizar el QUEUE_CONNECTION=database en el archivo de configuración (.env) y así comienza ese “largo” camino a usar una cola en Laravel para ciertas tareas que llevan poco más de 1 segundo, en este caso notificaciones." />
+<link rel="canonical" href="https://halivert.dev/blog/2020/05/laravel-queue-shared-host/" />
+<meta property="og:url" content="https://halivert.dev/blog/2020/05/laravel-queue-shared-host/" />
+<meta property="og:site_name" content="Halivert" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-31T00:50:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tareas en cola, Laravel (Servidor compartido)" />
+<meta name="twitter:site" content="@halivert" />
+<meta name="twitter:creator" content="@halivert" />
+<script type="application/ld+json">
+{"datePublished":"2020-05-31T00:50:00-05:00","dateModified":"2020-05-31T00:50:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://halivert.dev/blog/2020/05/laravel-queue-shared-host/"},"description":"No quería demasiado retraso en las peticiones que enviaban un correo, así que decidí utilizar el QUEUE_CONNECTION=database en el archivo de configuración (.env) y así comienza ese “largo” camino a usar una cola en Laravel para ciertas tareas que llevan poco más de 1 segundo, en este caso notificaciones.","headline":"Tareas en cola, Laravel (Servidor compartido)","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://halivert.dev/assets/img/halivert-logo.png"},"name":"halivert"},"url":"https://halivert.dev/blog/2020/05/laravel-queue-shared-host/","author":{"@type":"Person","name":"halivert"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		
+			<meta property="has_instant_view" content="true"/>
+		
+	</head>
+
+	<body>
+		
+			<a
+				class="skip-link"
+				href="#main-container"
+				data-turbo="false"
+				tab-index="0"
+				>Ir al contenido</a
+			>
+		
+
+		<aside id="side-menu" class="menu">
+	<ul class="menu-list mt-1">
+		<li>
+			<a class="px-1" href="https://halivert.dev/">
+				<img
+					class="logo my-0 dark"
+					src="https://halivert.dev/assets/img/halivert-logo.webp"
+					alt="Logo de Halivert"
+				/>
+			</a>
+		</li>
+	</ul>
+
+	<ul class="menu-list my-1">
+		<li>
+			<a href="https://halivert.dev/blog/">Blog</a>
+		</li>
+		<!--li>
+			<a href="https://halivert.dev/projects/">Proyectos</a>
+		</li--><li>
+			<button
+				id="search-button"
+				type="button"
+				class="menu-item"
+				onclick="showSearchModal()"
+			>
+				<span>
+					<i class="fas fa-search"></i>
+				</span>
+				<span>Buscar</span>
+				<span class="keycode">/</span>
+			</button>
+		</li></ul>
+</aside><div id="search-modal" class="modal search-modal is-hidden">
+		<div class="modal-content">
+			<button class="delete mb-4" onclick="hideModal(this)"></button>
+
+			<div class="my-5">
+				<input
+					id="search-input"
+					placeholder="Buscar..."
+					class="input"
+					type="text"
+					oninput="inputSearch(this)"
+				/>
+			</div>
+
+			<div class="columns">
+				<div class="column reader">
+					<section id="search-results" class="has-text-left"></section>
+				</div>
+			</div>
+
+			<template id="post-template">
+				<section>
+					<h2 class="title is-2">
+						<a class="post-title has-text-primary" href="#"></a>
+					</h2>
+					<hr />
+					<div class="columns">
+						<div class="column">
+							<div class="post-content content has-text-justified"></div>
+						</div>
+						<picture class="post-picture column is-3-desktop"></picture>
+					</div>
+					<div class="box has-text-right">
+						<i class="fas fa-user" aria-hidden="true"></i>
+						<span class="post-author"></span>
+						<span class="mobile-separator"></span>
+						<i class="fas fa-calendar" aria-hidden="true"></i>
+						<span class="post-date"></span>
+					</div>
+					<br />
+				</section>
+			</template>
+		</div>
+	</div>
+
+<main id="main-container" class="section is-size-5 is-size-6-mobile">
+  
+
+<div class="columns">
+	<div class="column is-offset-1-desktop">
+		<div class="reader">
+			<div id="title-div" class="columns mb-0">
+				<header class="column">
+					<h1 class="title is-2 has-text-primary">Tareas en cola, Laravel (Servidor compartido)</h1>
+					<small>
+						
+							<i>por</i>
+							<a href="https://halivert.dev/authors/halivert">Halí</a> -
+						
+							<i>publicado:</i> May 31, 20
+
+						
+					</small>
+				</header>
+				
+			</div>
+			<div class="columns">
+				<div class="column tags"><span class="tag ">Laravel</span><span class="tag ">Host</span><span class="tag ">Servidor</span></div>
+			</div>
+			<hr />
+			<section id="content" class="content">
+				<p>No quería demasiado retraso en las peticiones que enviaban un correo, así que
+decidí utilizar el <code class="language-plaintext highlighter-rouge">QUEUE_CONNECTION=database</code> en el archivo de configuración
+(.env) y así comienza ese “largo” camino a usar una cola en Laravel para ciertas
+tareas que llevan poco más de 1 segundo, en este caso notificaciones.</p>
+
+<!-- Seguir leyendo -->
+
+<p>Suponiendo que tenemos las notificaciones que deseamos utilizar, creamos las
+migraciones (en caso que no existan) para las tablas que utilizaremos para
+guardar las tareas en la cola (jobs) y las tareas fallidas (failed_jobs).</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php artisan queue:table
+php artisan queue:failed-table
+</code></pre></div></div>
+
+<p>Ahora tenemos que programar el inicio y reinicio (opcional) de la cola para que
+ejecute las tareas que guardamos ahí.</p>
+
+<p>En nuestro archivo <code class="language-plaintext highlighter-rouge">app/Console/Kernel.php</code> agregamos lo siguiente al método
+<code class="language-plaintext highlighter-rouge">schedule</code>.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$schedule</span><span class="o">-&gt;</span><span class="nf">command</span><span class="p">(</span><span class="s1">'queue:work --tries=3 --delay=5'</span><span class="p">)</span>
+  <span class="o">-&gt;</span><span class="nf">everyMinute</span><span class="p">()</span>
+  <span class="o">-&gt;</span><span class="nf">withoutOverlapping</span><span class="p">()</span>
+  <span class="o">-&gt;</span><span class="nf">runInBackground</span><span class="p">()</span>
+  <span class="o">-&gt;</span><span class="nf">appendOutputTo</span><span class="p">(</span><span class="nf">config</span><span class="p">(</span><span class="s1">'queue.log'</span><span class="p">,</span> <span class="s1">'queue.log'</span><span class="p">));</span>
+
+<span class="c1">// Opcionalmente si queremos reinicar la cola cada 10 minutos</span>
+<span class="nv">$schedule</span><span class="o">-&gt;</span><span class="nf">command</span><span class="p">(</span><span class="s1">'queue:restart'</span><span class="p">)</span><span class="o">-&gt;</span><span class="nf">everyTenMinutes</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>Dentro del comando que ejecutamos le pedimos que intente cada tarea 3 veces en
+caso de fallar y que tarde 5 segundos antes de volverlo a intentar.</p>
+
+<p>Además estamos pidiendo a Laravel que se ejecuten las tareas que están en la
+cola cada minuto (<code class="language-plaintext highlighter-rouge">everyMinute</code>) sin que se traslape con otro proceso que
+hayamos ejecutado (<code class="language-plaintext highlighter-rouge">withoutOverlapping</code>), además le pedimos que lo haga “tras
+bambalinas” (<code class="language-plaintext highlighter-rouge">runInBackground</code>) para continuar con los demás procesos en el
+método schedule y que añada la salida a un archivo que obtenemos de la
+configuración (<code class="language-plaintext highlighter-rouge">appendOutputTo</code>), por defecto <code class="language-plaintext highlighter-rouge">queue.log</code>.</p>
+
+<p>Ahora solo falta agregar los cronjobs correspondientes para que se ejecuten los
+procesos que definimos en este método.</p>
+
+<p>Tecleando <code class="language-plaintext highlighter-rouge">crontabs -e</code> se abre el archivo donde agregaremos la siguiente línea.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * * * * cd [ruta del proyecto] &amp;&amp; php artisan schedule:run &gt;&gt; /dev/null 2&gt;&amp;1
+</code></pre></div></div>
+
+<p>Y listo, nuestras tareas en cola comenzarán a ejecutarse cuando guardemos las
+crontabs.</p>
+
+<p>Esto resulta particularmente útil para servidores compartidos en donde no puedes
+instalar cosas a tu antojo, por ejemplo <code class="language-plaintext highlighter-rouge">supervisor</code>.</p>
+
+<p>Y nada, aquí están las fuentes.</p>
+
+<p><a href="https://laravel.com/docs/7.x/queues">https://laravel.com/docs/7.x/queues</a><br />
+<a href="https://laravel.com/docs/7.x/scheduling">https://laravel.com/docs/7.x/scheduling</a><br />
+<a href="https://laracasts.com/discuss/channels/laravel/free-queue-solution-for-shared-hosting">https://laracasts.com/discuss/channels/laravel/free-queue-solution-for-shared-hosting</a></p>
+
+<p>Adiós 👋🏽</p>
+
+			</section>
+
+			<section id="reactions" class="mt-4">
+				<hr />
+
+				<div class="flex justify-between items-center">
+					<a class="button twitter-share-button">
+						<span class="icon"><i class="fab fa-twitter"></i></span>
+						<span>Tweet</span>
+					</a>
+				</div>
+			</section>
+
+			<div class="printable">
+				<p class="has-text-right">https://halivert.dev/blog/2020/05/laravel-queue-shared-host/</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="columns">
+	<div class="column is-offset-1-desktop">
+		<div class="reader">
+			<nav
+				class="pagination is-centered"
+				role="navigation"
+				aria-label="pagination"
+				>
+				
+					<a
+						href="https://halivert.dev/blog/2020/04/telegram-desktop-shortcuts/"
+						class="pagination-previous button is-primary is-rounded"
+						>Anterior</a
+					>
+				
+				
+					<a
+						href="https://halivert.dev/blog/2020/06/yep-i-use-dvorak/"
+						class="pagination-next button is-primary is-rounded"
+						>Siguiente</a
+					>
+				
+			</nav>
+		</div>
+	</div>
+</div><script>
+	window.apiUrl = "https://webmention.io/api"
+	window.postUrl = "https://halivert.dev/blog/2020/05/laravel-queue-shared-host/" || ""
+
+	window.getReactions = async () => {
+		if (window.postUrl) {
+			return await (await fetch(
+				`${window.apiUrl}/count.json?target=${window.postUrl}`
+			)).json()
+		}
+
+		return {}
+	}
+
+	window.mentionsUrl = `${window.apiUrl}/mentions.html?target=https://halivert.dev/blog/2020/05/laravel-queue-shared-host/`
+</script>
+<script
+	type="module"
+	src="https://halivert.dev/assets/js/post.min.js"></script
+>
+
+</main>
+
+
+		<button
+			id="theme-switcher"
+			class="button theme-switcher"
+			onclick="changeTheme('theme-switcher')"
+			data-turbo-permanent
+		>
+			<span class="icon">
+				<i class="fas" aria-hidden="true"></i>
+			</span>
+		</button>
+
+		
+			<footer class="footer">
+	<div class="start">
+		<a href="https://halivert.dev/feed.xml">
+			<span>RSS</span>
+			<span class="icon">
+				<i class="fas fa-rss" aria-hidden="true"></i>
+			</span>
+		</a>
+	</div>
+
+	<div class="content has-text-centered">
+		<a
+			class="license-link"
+			rel="license"
+			href="http://creativecommons.org/licenses/by/4.0/"
+		>
+			<img
+				alt="Licencia Creative Commons"
+				style="border-width: 0"
+				src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+			/>
+		</a>
+		<p>
+			Los artículos escritos en este blog están bajo la licencia
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+				Creative Commons Attribution 4.0 International License</a
+			>.
+		</p>
+	</div>
+</footer>
+
+		
+	</body>
+</html>

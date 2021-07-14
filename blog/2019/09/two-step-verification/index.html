@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<script type="module">
+			import * as turbo from "https://cdn.skypack.dev/@hotwired/turbo";
+		</script><link rel="stylesheet" href="https://halivert.dev/assets/css/halivert.css" /><link
+				rel="webmention"
+				href="https://webmention.io/halivert.dev/webmention"
+			/>
+			<link rel="pingback" href="https://webmention.io/halivert.dev/xmlrpc" /><link
+			rel="stylesheet"
+			href="https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css" />
+		</noscript>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/print.css"
+			media="print"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/fa.min.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://halivert.dev/assets/css/fa.min.css" />
+		</noscript>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/solarized.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://halivert.dev/assets/css/solarized.css" />
+		</noscript>
+
+		
+<meta property="unix_timestamp" content="1569430920">
+
+<meta property="author:name" content="Halí" />
+				<meta property="telegram:author" content="" />
+			<meta name="telegram:channel" content="@halivertsblog" /><meta name="monetization" content="$ilp.uphold.com/yJJL4YrpRMQi" /><script>
+			window.siteUrl = "https://halivert.dev/"
+		</script>
+		<script type="module" src="https://halivert.dev/assets/js/main.js"></script>
+		<script src="https://unpkg.com/lunr@2.3.9/lunr.min.js" defer></script>
+		<script
+			type="module"
+			src="https://halivert.dev/assets/js/search.js"
+			defer
+		></script>
+		<script
+			type="module"
+			src="https://halivert.dev/assets/js/themeSwitcher.js"
+			defer
+		></script>
+
+		<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Verificación en dos pasos | Halivert</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Verificación en dos pasos" />
+<meta name="author" content="halivert" />
+<meta property="og:locale" content="es_MX" />
+<meta name="description" content="Muchos sistemas son realmente seguros. Hablando de redes sociales y sitios en donde tienes que escribir un usuario y contraseña para iniciar sesión podemos decir que la tecnología ha avanzado bien, en la mayoría de los casos (en los que no se guarda la contraseña como texto plano) es prácticamente imposible descifrarla (hasta ahora…)." />
+<meta property="og:description" content="Muchos sistemas son realmente seguros. Hablando de redes sociales y sitios en donde tienes que escribir un usuario y contraseña para iniciar sesión podemos decir que la tecnología ha avanzado bien, en la mayoría de los casos (en los que no se guarda la contraseña como texto plano) es prácticamente imposible descifrarla (hasta ahora…)." />
+<link rel="canonical" href="https://halivert.dev/blog/2019/09/two-step-verification/" />
+<meta property="og:url" content="https://halivert.dev/blog/2019/09/two-step-verification/" />
+<meta property="og:site_name" content="Halivert" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-25T12:02:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Verificación en dos pasos" />
+<meta name="twitter:site" content="@halivert" />
+<meta name="twitter:creator" content="@halivert" />
+<script type="application/ld+json">
+{"datePublished":"2019-09-25T12:02:00-05:00","dateModified":"2019-09-25T12:02:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://halivert.dev/blog/2019/09/two-step-verification/"},"description":"Muchos sistemas son realmente seguros. Hablando de redes sociales y sitios en donde tienes que escribir un usuario y contraseña para iniciar sesión podemos decir que la tecnología ha avanzado bien, en la mayoría de los casos (en los que no se guarda la contraseña como texto plano) es prácticamente imposible descifrarla (hasta ahora…).","headline":"Verificación en dos pasos","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://halivert.dev/assets/img/halivert-logo.png"},"name":"halivert"},"url":"https://halivert.dev/blog/2019/09/two-step-verification/","author":{"@type":"Person","name":"halivert"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		
+			<meta property="has_instant_view" content="true"/>
+		
+	</head>
+
+	<body>
+		
+			<a
+				class="skip-link"
+				href="#main-container"
+				data-turbo="false"
+				tab-index="0"
+				>Ir al contenido</a
+			>
+		
+
+		<aside id="side-menu" class="menu">
+	<ul class="menu-list mt-1">
+		<li>
+			<a class="px-1" href="https://halivert.dev/">
+				<img
+					class="logo my-0 dark"
+					src="https://halivert.dev/assets/img/halivert-logo.webp"
+					alt="Logo de Halivert"
+				/>
+			</a>
+		</li>
+	</ul>
+
+	<ul class="menu-list my-1">
+		<li>
+			<a href="https://halivert.dev/blog/">Blog</a>
+		</li>
+		<!--li>
+			<a href="https://halivert.dev/projects/">Proyectos</a>
+		</li--><li>
+			<button
+				id="search-button"
+				type="button"
+				class="menu-item"
+				onclick="showSearchModal()"
+			>
+				<span>
+					<i class="fas fa-search"></i>
+				</span>
+				<span>Buscar</span>
+				<span class="keycode">/</span>
+			</button>
+		</li></ul>
+</aside><div id="search-modal" class="modal search-modal is-hidden">
+		<div class="modal-content">
+			<button class="delete mb-4" onclick="hideModal(this)"></button>
+
+			<div class="my-5">
+				<input
+					id="search-input"
+					placeholder="Buscar..."
+					class="input"
+					type="text"
+					oninput="inputSearch(this)"
+				/>
+			</div>
+
+			<div class="columns">
+				<div class="column reader">
+					<section id="search-results" class="has-text-left"></section>
+				</div>
+			</div>
+
+			<template id="post-template">
+				<section>
+					<h2 class="title is-2">
+						<a class="post-title has-text-primary" href="#"></a>
+					</h2>
+					<hr />
+					<div class="columns">
+						<div class="column">
+							<div class="post-content content has-text-justified"></div>
+						</div>
+						<picture class="post-picture column is-3-desktop"></picture>
+					</div>
+					<div class="box has-text-right">
+						<i class="fas fa-user" aria-hidden="true"></i>
+						<span class="post-author"></span>
+						<span class="mobile-separator"></span>
+						<i class="fas fa-calendar" aria-hidden="true"></i>
+						<span class="post-date"></span>
+					</div>
+					<br />
+				</section>
+			</template>
+		</div>
+	</div>
+
+<main id="main-container" class="section is-size-5 is-size-6-mobile">
+  
+
+<div class="columns">
+	<div class="column is-offset-1-desktop">
+		<div class="reader">
+			<div id="title-div" class="columns mb-0">
+				<header class="column">
+					<h1 class="title is-2 has-text-primary">Verificación en dos pasos</h1>
+					<small>
+						
+							<i>por</i>
+							<a href="https://halivert.dev/authors/halivert">Halí</a> -
+						
+							<i>publicado:</i> Sep 25, 19
+
+						
+					</small>
+				</header>
+				
+			</div>
+			<div class="columns">
+				<div class="column tags"><span class="tag ">Seguridad</span><span class="tag ">Verificación</span></div>
+			</div>
+			<hr />
+			<section id="content" class="content">
+				<p>Muchos sistemas son realmente seguros. Hablando de redes sociales y sitios en
+donde tienes que escribir un usuario y contraseña para iniciar sesión podemos
+decir que la tecnología ha avanzado bien, en la mayoría de los casos (en los
+que no se guarda la contraseña como texto plano) es prácticamente imposible
+descifrarla (hasta ahora…).</p>
+
+<!-- Seguir leyendo -->
+
+<p>Pero aún así, siguen existiendo los <a href="https://dle.rae.es/?id=BBnPPfB">crackers</a>, y más aún, siguen teniendo
+éxito, ¿cómo es que hacen esto? Lo cierto es que no soy un experto en
+seguridad web, pero seguramente también habrás escuchado hablar sobre el
+phishing, veamos que es y cómo evitarlo.</p>
+
+<p><small>
+<strong>Nota:</strong> La Wikipedia en inglés es algo confiable
+</small></p>
+
+<h4 id="phishing-"><a href="https://en.wikipedia.org/wiki/Phishing">Phishing</a> 🎣</h4>
+
+<p>Como su nombre lo dice, se trata de una técnica que busca hacer que caigas en
+un cebo, y esto lo intentan mediante mensajes que parecen provenir de fuentes
+seguras, pero que en realidad son todo lo contrario.
+Una vez que obtienen de ti preguntas y códigos de seguridad, pueden acceder a
+tu cuenta simulando que eres tú, y que olvidaste tus credenciales.</p>
+
+<h5 id="cómo-evitar-el-phishing">¿Cómo evitar el phishing?</h5>
+
+<p>Lo más importante es verificar las fuentes de donde proviene un mensaje o
+email, para esto, muchas veces hace falta únicamente revisar el correo
+electrónico o la cuenta que te envía el mensaje. Si ves correos como…</p>
+
+<div class="columns is-printable">
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2019-09-two-step-verification/phishing1.png"><picture>
+		<source srcset="https://halivert.dev/assets/2019-09-two-step-verification/phishing1.webp" type="image/webp" /><img src="https://halivert.dev/assets/2019-09-two-step-verification/phishing1.png" alt="Ejemplo de phishing: Bank of America" /></picture></a>
+  </div>
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2019-09-two-step-verification/phishing2.png"><picture>
+		<source srcset="https://halivert.dev/assets/2019-09-two-step-verification/phishing2.webp" type="image/webp" /><img src="https://halivert.dev/assets/2019-09-two-step-verification/phishing2.png" alt="Ejemplo de phishing: iTunes" /></picture></a>
+  </div>
+</div>
+<div class="columns is-printable">
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2019-09-two-step-verification/phishing3.png"><picture>
+		<source srcset="https://halivert.dev/assets/2019-09-two-step-verification/phishing3.webp" type="image/webp" /><img src="https://halivert.dev/assets/2019-09-two-step-verification/phishing3.png" alt="Ejemplo de phishing: PayPal" /></picture></a>
+  </div>
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2019-09-two-step-verification/phishing4.png"><picture>
+		<source srcset="https://halivert.dev/assets/2019-09-two-step-verification/phishing4.webp" type="image/webp" /><img src="https://halivert.dev/assets/2019-09-two-step-verification/phishing4.png" alt="Ejemplo de phishing: Microsoft" /></picture></a>
+  </div>
+</div>
+
+<p>Revisa el dominio y si, evidentemente no tienen que ver con la empresa a la
+que dicen pertenecer, entonces bórralos, y no hagas click en ningún vínculo de
+dicho correo.</p>
+
+<p>Otra cosa que puede ayudarte es revisar los vínculos en los que haces click,
+los vínculos acortados que llegan por correo, generalmente son un mal indicio.</p>
+
+<p>Queda algo más que hacer para no ser víctima de alguno de estos robos de
+cuentas o datos, puedes activar la <strong>verificación en dos pasos</strong>.</p>
+
+<h6 id="verificación-en-dos-pasos">Verificación en dos pasos</h6>
+
+<p>Se trata de un método que hace necesario, además de introducir una contraseña,
+(que quizá te hayan robado con ayuda del phishing) introducir un código de
+seguridad que solo tú posees. (Es importante que no compartas dichos códigos
+con nadie, porque la verificación en dos pasos perdería toda su utilidad).</p>
+
+<p>Algunas redes sociales te permiten usar aplicaciones móviles que generan
+códigos de un solo uso que se recargan automáticamente cada cierto tiempo (1
+minuto, 30 segundos) y que sirven como método para afirmar que eres tú quien
+está accediendo a tu cuenta, y no alguien que robó tu contraseña. Aplicaciones
+como <a href="https://authy.com">Authy</a> o <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Authenticator</a> sirven para estos fines. Otras
+aplicaciones web te ofrecen enviar un código a tu celular por medio de SMS.</p>
+
+<h4 id="conclusión">Conclusión</h4>
+
+<p>Mi recomendación personal es que actives la verificación en dos pasos de la
+mayoría de cuentas que tengas en Internet.</p>
+
+<p>Redes sociales como Snapchat, Twitter e Instagram, cuentan con verificación en
+dos pasos, servicios de mensajería como Telegram y Whatsapp y otras
+aplicaciones web como Github, Heroku, Google y Outlook también cuentan con
+ella.</p>
+
+<p>Es sencillo activar la verificación en dos pasos. Aquí muestro los nombres que
+tiene en Telegram, Twitter y Snapchat.</p>
+
+<div class="columns is-printable page-break-before">
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2019-09-two-step-verification/telegram-2fa.png"><picture>
+		<source srcset="https://halivert.dev/assets/2019-09-two-step-verification/telegram-2fa.webp" type="image/webp" /><img src="https://halivert.dev/assets/2019-09-two-step-verification/telegram-2fa.png" alt="Configuración de privacidad y seguridad de Telegram" /></picture></a>
+  </div>
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2019-09-two-step-verification/twitter-2fa.png"><picture>
+		<source srcset="https://halivert.dev/assets/2019-09-two-step-verification/twitter-2fa.webp" type="image/webp" /><img src="https://halivert.dev/assets/2019-09-two-step-verification/twitter-2fa.png" alt="Configuración de verificación de inicio de sesión de Twitter" /></picture></a>
+  </div>
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2019-09-two-step-verification/snapchat-2fa.png"><picture>
+		<source srcset="https://halivert.dev/assets/2019-09-two-step-verification/snapchat-2fa.webp" type="image/webp" /><img src="https://halivert.dev/assets/2019-09-two-step-verification/snapchat-2fa.png" alt="Ajustes de Snapchat (Autenticación de dos factores)" /></picture></a>
+  </div>
+</div>
+
+<p>Hasta la próxima 👋🏽</p>
+
+
+			</section>
+
+			<section id="reactions" class="mt-4">
+				<hr />
+
+				<div class="flex justify-between items-center">
+					<a class="button twitter-share-button">
+						<span class="icon"><i class="fab fa-twitter"></i></span>
+						<span>Tweet</span>
+					</a>
+				</div>
+			</section>
+
+			<div class="printable">
+				<p class="has-text-right">https://halivert.dev/blog/2019/09/two-step-verification/</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="columns">
+	<div class="column is-offset-1-desktop">
+		<div class="reader">
+			<nav
+				class="pagination is-centered"
+				role="navigation"
+				aria-label="pagination"
+				>
+				
+					<a
+						href="https://halivert.dev/blog/2019/07/vim-macro-for-bulma/"
+						class="pagination-previous button is-primary is-rounded"
+						>Anterior</a
+					>
+				
+				
+					<a
+						href="https://halivert.dev/blog/2019/10/vue-select/"
+						class="pagination-next button is-primary is-rounded"
+						>Siguiente</a
+					>
+				
+			</nav>
+		</div>
+	</div>
+</div><script>
+	window.apiUrl = "https://webmention.io/api"
+	window.postUrl = "https://halivert.dev/blog/2019/09/two-step-verification/" || ""
+
+	window.getReactions = async () => {
+		if (window.postUrl) {
+			return await (await fetch(
+				`${window.apiUrl}/count.json?target=${window.postUrl}`
+			)).json()
+		}
+
+		return {}
+	}
+
+	window.mentionsUrl = `${window.apiUrl}/mentions.html?target=https://halivert.dev/blog/2019/09/two-step-verification/`
+</script>
+<script
+	type="module"
+	src="https://halivert.dev/assets/js/post.min.js"></script
+>
+
+</main>
+
+
+		<button
+			id="theme-switcher"
+			class="button theme-switcher"
+			onclick="changeTheme('theme-switcher')"
+			data-turbo-permanent
+		>
+			<span class="icon">
+				<i class="fas" aria-hidden="true"></i>
+			</span>
+		</button>
+
+		
+			<footer class="footer">
+	<div class="start">
+		<a href="https://halivert.dev/feed.xml">
+			<span>RSS</span>
+			<span class="icon">
+				<i class="fas fa-rss" aria-hidden="true"></i>
+			</span>
+		</a>
+	</div>
+
+	<div class="content has-text-centered">
+		<a
+			class="license-link"
+			rel="license"
+			href="http://creativecommons.org/licenses/by/4.0/"
+		>
+			<img
+				alt="Licencia Creative Commons"
+				style="border-width: 0"
+				src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+			/>
+		</a>
+		<p>
+			Los artículos escritos en este blog están bajo la licencia
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+				Creative Commons Attribution 4.0 International License</a
+			>.
+		</p>
+	</div>
+</footer>
+
+		
+	</body>
+</html>

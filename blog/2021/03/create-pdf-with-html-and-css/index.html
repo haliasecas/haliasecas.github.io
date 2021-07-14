@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es-MX" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<script type="module">
+			import * as turbo from "https://cdn.skypack.dev/@hotwired/turbo";
+		</script><link rel="stylesheet" href="https://halivert.dev/assets/css/halivert.css" /><link
+				rel="webmention"
+				href="https://webmention.io/halivert.dev/webmention"
+			/>
+			<link rel="pingback" href="https://webmention.io/halivert.dev/xmlrpc" /><link
+			rel="stylesheet"
+			href="https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css" />
+		</noscript>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/print.css"
+			media="print"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/fa.min.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://halivert.dev/assets/css/fa.min.css" />
+		</noscript>
+
+		<link
+			rel="stylesheet"
+			href="https://halivert.dev/assets/css/solarized.css"
+			media="print"
+			onload="this.media='all'; this.onload=null;"
+		/>
+		<noscript>
+			<link rel="stylesheet" href="https://halivert.dev/assets/css/solarized.css" />
+		</noscript>
+
+		
+<meta property="unix_timestamp" content="1616041080">
+
+<meta property="author:name" content="Halí" />
+				<meta property="telegram:author" content="" />
+			<meta name="telegram:channel" content="@halivertsblog" /><meta name="monetization" content="$ilp.uphold.com/yJJL4YrpRMQi" /><script>
+			window.siteUrl = "https://halivert.dev/"
+		</script>
+		<script type="module" src="https://halivert.dev/assets/js/main.js"></script>
+		<script src="https://unpkg.com/lunr@2.3.9/lunr.min.js" defer></script>
+		<script
+			type="module"
+			src="https://halivert.dev/assets/js/search.js"
+			defer
+		></script>
+		<script
+			type="module"
+			src="https://halivert.dev/assets/js/themeSwitcher.js"
+			defer
+		></script>
+
+		<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Crear un PDF con HTML y CSS | Halivert</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Crear un PDF con HTML y CSS" />
+<meta name="author" content="halivert" />
+<meta property="og:locale" content="es_MX" />
+<meta name="description" content="Para crear PDF existen una gran variedad de herramientas; personalmente encuentro el uso de HTML y CSS sencillo, por lo que quiero mostrarte cómo hacer un PDF a partir de estos dos lenguajes de programación" />
+<meta property="og:description" content="Para crear PDF existen una gran variedad de herramientas; personalmente encuentro el uso de HTML y CSS sencillo, por lo que quiero mostrarte cómo hacer un PDF a partir de estos dos lenguajes de programación" />
+<link rel="canonical" href="https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/" />
+<meta property="og:url" content="https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/" />
+<meta property="og:site_name" content="Halivert" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-17T22:18:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Crear un PDF con HTML y CSS" />
+<meta name="twitter:site" content="@halivert" />
+<meta name="twitter:creator" content="@halivert" />
+<script type="application/ld+json">
+{"datePublished":"2021-03-17T22:18:00-06:00","dateModified":"2021-03-17T22:18:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/"},"description":"Para crear PDF existen una gran variedad de herramientas; personalmente encuentro el uso de HTML y CSS sencillo, por lo que quiero mostrarte cómo hacer un PDF a partir de estos dos lenguajes de programación","headline":"Crear un PDF con HTML y CSS","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://halivert.dev/assets/img/halivert-logo.png"},"name":"halivert"},"url":"https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/","author":{"@type":"Person","name":"halivert"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+		
+			<meta property="has_instant_view" content="true"/>
+		
+	</head>
+
+	<body>
+		
+			<a
+				class="skip-link"
+				href="#main-container"
+				data-turbo="false"
+				tab-index="0"
+				>Ir al contenido</a
+			>
+		
+
+		<aside id="side-menu" class="menu">
+	<ul class="menu-list mt-1">
+		<li>
+			<a class="px-1" href="https://halivert.dev/">
+				<img
+					class="logo my-0 dark"
+					src="https://halivert.dev/assets/img/halivert-logo.webp"
+					alt="Logo de Halivert"
+				/>
+			</a>
+		</li>
+	</ul>
+
+	<ul class="menu-list my-1">
+		<li>
+			<a href="https://halivert.dev/blog/">Blog</a>
+		</li>
+		<!--li>
+			<a href="https://halivert.dev/projects/">Proyectos</a>
+		</li--><li>
+			<button
+				id="search-button"
+				type="button"
+				class="menu-item"
+				onclick="showSearchModal()"
+			>
+				<span>
+					<i class="fas fa-search"></i>
+				</span>
+				<span>Buscar</span>
+				<span class="keycode">/</span>
+			</button>
+		</li></ul>
+</aside><div id="search-modal" class="modal search-modal is-hidden">
+		<div class="modal-content">
+			<button class="delete mb-4" onclick="hideModal(this)"></button>
+
+			<div class="my-5">
+				<input
+					id="search-input"
+					placeholder="Buscar..."
+					class="input"
+					type="text"
+					oninput="inputSearch(this)"
+				/>
+			</div>
+
+			<div class="columns">
+				<div class="column reader">
+					<section id="search-results" class="has-text-left"></section>
+				</div>
+			</div>
+
+			<template id="post-template">
+				<section>
+					<h2 class="title is-2">
+						<a class="post-title has-text-primary" href="#"></a>
+					</h2>
+					<hr />
+					<div class="columns">
+						<div class="column">
+							<div class="post-content content has-text-justified"></div>
+						</div>
+						<picture class="post-picture column is-3-desktop"></picture>
+					</div>
+					<div class="box has-text-right">
+						<i class="fas fa-user" aria-hidden="true"></i>
+						<span class="post-author"></span>
+						<span class="mobile-separator"></span>
+						<i class="fas fa-calendar" aria-hidden="true"></i>
+						<span class="post-date"></span>
+					</div>
+					<br />
+				</section>
+			</template>
+		</div>
+	</div>
+
+<main id="main-container" class="section is-size-5 is-size-6-mobile">
+  
+
+<div class="columns">
+	<div class="column is-offset-1-desktop">
+		<div class="reader">
+			<div id="title-div" class="columns mb-0">
+				<header class="column">
+					<h1 class="title is-2 has-text-primary">Crear un PDF con HTML y CSS</h1>
+					<small>
+						
+							<i>por</i>
+							<a href="https://halivert.dev/authors/halivert">Halí</a> -
+						
+							<i>publicado:</i> Mar 17, 21
+
+						
+					</small>
+				</header>
+				
+			</div>
+			<div class="columns">
+				<div class="column tags"><span class="tag ">Web</span><span class="tag ">HTML</span></div>
+			</div>
+			<hr />
+			<section id="content" class="content">
+				<p>Para crear PDF existen una gran variedad de herramientas; personalmente
+encuentro el uso de HTML y CSS sencillo, por lo que quiero mostrarte cómo hacer
+un PDF a partir de estos dos lenguajes de programación<!-- Seguir leyendo -->
+(ya sé que no son lenguajes de programación 😂).</p>
+
+<p>Convertir una página a PDF es una tarea… «sencilla», únicamente tienes que
+imprimir la página que quieras hacia un archivo y listo, sin embargo el tamaño
+de una pantalla difiere bastante del de una hoja de papel estándar
+(8.5in x 11in) si intentas hacerlo así nadamás, encontrarás algo cómo esto…</p>
+
+<div class="columns">
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-1.png"><picture>
+		<source srcset="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-1.webp" type="image/webp" /><img src="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-1.png" alt="Página uno antes de estilos" /></picture></a>
+  </div>
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-2.png"><picture>
+		<source srcset="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-2.webp" type="image/webp" /><img src="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-2.png" alt="Página dos antes de estilos" /></picture></a>
+  </div>
+</div>
+
+<p>Para dar estilo específico a la impresión, debes agregar una hoja de estilos que
+se utilize en esa situación, con especial atención al atributo
+<code class="language-plaintext highlighter-rouge">media="print"</code></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"style.css"</span> <span class="na">media=</span><span class="s">"print"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>Ahora solo queda hacer los estilos, necesarios para que se vea así:</p>
+
+<div class="columns">
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-1.png"><picture>
+		<source srcset="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-1.webp" type="image/webp" /><img src="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-1.png" alt="Página uno después de estilos" /></picture></a>
+  </div>
+  <div class="column">
+    <a target="_blank" rel="noopener noreferrer" href="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-2.png"><picture>
+		<source srcset="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-2.webp" type="image/webp" /><img src="https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-2.png" alt="Página dos después de estilos" /></picture></a>
+  </div>
+</div>
+
+<h2 id="styles">Estilos</h2>
+
+<p>Unicamente pondré algunos que valen la pena mencionar, los demás los puedes
+encontrar en <a href="https://halivert.dev/assets/css/print.css">esta hoja de estilos</a></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">break-after</span><span class="o">:</span> <span class="nt">always</span><span class="o">;</span> <span class="c">/* Forza el salto de línea después del elemento */</span>
+<span class="nt">break-before</span><span class="o">:</span> <span class="nt">always</span><span class="o">;</span> <span class="c">/* Forza el salto de línea antes del elemento */</span>
+<span class="nt">break-inside</span><span class="o">:</span> <span class="nt">avoid</span><span class="o">;</span> <span class="c">/* Previene el salto de línea en el elemento */</span>
+</code></pre></div></div>
+
+<p>Una de las cosas que más hago al convertir una página a PDF es asignar
+manualmente algunos saltos de línea con <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/break-after"><code class="language-plaintext highlighter-rouge">break-after</code></a> y
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/break-before"><code class="language-plaintext highlighter-rouge">break-before</code></a>, para evitar errores (muy grandes) en el diseño, está claro
+que no podrás evitar todos, pero sí se puede ver más o menos decente.</p>
+
+<p>Otro muy importante es evitar que algunos elementos se dividan entre dos
+páginas, con <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside"><code class="language-plaintext highlighter-rouge">break-inside</code></a> se puede lograr.</p>
+
+<p>Además yo elimino los márgenes de mis contenedores más grandes (html, body,
+main) ya que en una impresión, el usuario puede asignar sus propios márgenes o
+incluso quitarlos.</p>
+
+<p>Agrego una clase <code class="language-plaintext highlighter-rouge">printable</code> para ocultarla mientras se muestra en pantalla y
+hacerla visible en la impresión.</p>
+
+<p>También elimino algunos elementos que no vale la pena tener en PDF, como videos,
+elementos interactivos e incluso ciertas secciones de la página como el header y
+footer entre otras.</p>
+
+<p>Espero que esto te haya servido como introducción a los estilos de impresión, y
+me encantaría saber tus opiniones sobre esta capacidad de HTML y CSS en los
+navegadores modernos.</p>
+
+<p>Adiós 👋🏽</p>
+
+
+			</section>
+
+			<section id="reactions" class="mt-4">
+				<hr />
+
+				<div class="flex justify-between items-center">
+					<a class="button twitter-share-button">
+						<span class="icon"><i class="fab fa-twitter"></i></span>
+						<span>Tweet</span>
+					</a>
+				</div>
+			</section>
+
+			<div class="printable">
+				<p class="has-text-right">https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="columns">
+	<div class="column is-offset-1-desktop">
+		<div class="reader">
+			<nav
+				class="pagination is-centered"
+				role="navigation"
+				aria-label="pagination"
+				>
+				
+					<a
+						href="https://halivert.dev/blog/2021/03/how-to-google/"
+						class="pagination-previous button is-primary is-rounded"
+						>Anterior</a
+					>
+				
+				
+					<a class="pagination-next button is-rounded" disabled>Siguiente</a>
+				
+			</nav>
+		</div>
+	</div>
+</div><script>
+	window.apiUrl = "https://webmention.io/api"
+	window.postUrl = "https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/" || ""
+
+	window.getReactions = async () => {
+		if (window.postUrl) {
+			return await (await fetch(
+				`${window.apiUrl}/count.json?target=${window.postUrl}`
+			)).json()
+		}
+
+		return {}
+	}
+
+	window.mentionsUrl = `${window.apiUrl}/mentions.html?target=https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/`
+</script>
+<script
+	type="module"
+	src="https://halivert.dev/assets/js/post.min.js"></script
+>
+
+</main>
+
+
+		<button
+			id="theme-switcher"
+			class="button theme-switcher"
+			onclick="changeTheme('theme-switcher')"
+			data-turbo-permanent
+		>
+			<span class="icon">
+				<i class="fas" aria-hidden="true"></i>
+			</span>
+		</button>
+
+		
+			<footer class="footer">
+	<div class="start">
+		<a href="https://halivert.dev/feed.xml">
+			<span>RSS</span>
+			<span class="icon">
+				<i class="fas fa-rss" aria-hidden="true"></i>
+			</span>
+		</a>
+	</div>
+
+	<div class="content has-text-centered">
+		<a
+			class="license-link"
+			rel="license"
+			href="http://creativecommons.org/licenses/by/4.0/"
+		>
+			<img
+				alt="Licencia Creative Commons"
+				style="border-width: 0"
+				src="https://i.creativecommons.org/l/by/4.0/88x31.png"
+			/>
+		</a>
+		<p>
+			Los artículos escritos en este blog están bajo la licencia
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+				Creative Commons Attribution 4.0 International License</a
+			>.
+		</p>
+	</div>
+</footer>
+
+		
+	</body>
+</html>

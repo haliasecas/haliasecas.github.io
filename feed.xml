@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es_MX"><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://halivert.dev/feed.xml" rel="self" type="application/atom+xml" /><link href="https://halivert.dev/" rel="alternate" type="text/html" hreflang="es_MX" /><updated>2021-07-13T21:58:34-05:00</updated><id>https://halivert.dev/feed.xml</id><title type="html">Halivert</title><subtitle>Sitio de Halí Velázquez</subtitle><entry xml:lang="es_MX"><title type="html">Crear un PDF con HTML y CSS</title><link href="https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/" rel="alternate" type="text/html" title="Crear un PDF con HTML y CSS" /><published>2021-03-17T22:18:00-06:00</published><updated>2021-03-17T22:18:00-06:00</updated><id>https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css</id><content type="html" xml:base="https://halivert.dev/blog/2021/03/create-pdf-with-html-and-css/">&lt;p&gt;Para crear PDF existen una gran variedad de herramientas; personalmente
+encuentro el uso de HTML y CSS sencillo, por lo que quiero mostrarte cómo hacer
+un PDF a partir de estos dos lenguajes de programación&lt;!-- Seguir leyendo --&gt;
+(ya sé que no son lenguajes de programación 😂).&lt;/p&gt;
+
+&lt;p&gt;Convertir una página a PDF es una tarea… «sencilla», únicamente tienes que
+imprimir la página que quieras hacia un archivo y listo, sin embargo el tamaño
+de una pantalla difiere bastante del de una hoja de papel estándar
+(8.5in x 11in) si intentas hacerlo así nadamás, encontrarás algo cómo esto…&lt;/p&gt;
+
+&lt;div class=&quot;columns&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-1.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-1.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-1.png&quot; alt=&quot;Página uno antes de estilos&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-2.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-2.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/Before-2.png&quot; alt=&quot;Página dos antes de estilos&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Para dar estilo específico a la impresión, debes agregar una hoja de estilos que
+se utilize en esa situación, con especial atención al atributo
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;media=&quot;print&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;style.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;media=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;print&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora solo queda hacer los estilos, necesarios para que se vea así:&lt;/p&gt;
+
+&lt;div class=&quot;columns&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-1.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-1.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-1.png&quot; alt=&quot;Página uno después de estilos&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-2.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-2.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2021-03-create-pdf-with-html-and-css/After-2.png&quot; alt=&quot;Página dos después de estilos&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;styles&quot;&gt;Estilos&lt;/h2&gt;
+
+&lt;p&gt;Unicamente pondré algunos que valen la pena mencionar, los demás los puedes
+encontrar en &lt;a href=&quot;https://halivert.dev/assets/css/print.css&quot;&gt;esta hoja de estilos&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;break-after&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;always&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* Forza el salto de línea después del elemento */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;break-before&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;always&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* Forza el salto de línea antes del elemento */&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;break-inside&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;avoid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* Previene el salto de línea en el elemento */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Una de las cosas que más hago al convertir una página a PDF es asignar
+manualmente algunos saltos de línea con &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/break-after&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break-after&lt;/code&gt;&lt;/a&gt; y
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/break-before&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break-before&lt;/code&gt;&lt;/a&gt;, para evitar errores (muy grandes) en el diseño, está claro
+que no podrás evitar todos, pero sí se puede ver más o menos decente.&lt;/p&gt;
+
+&lt;p&gt;Otro muy importante es evitar que algunos elementos se dividan entre dos
+páginas, con &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/break-inside&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;break-inside&lt;/code&gt;&lt;/a&gt; se puede lograr.&lt;/p&gt;
+
+&lt;p&gt;Además yo elimino los márgenes de mis contenedores más grandes (html, body,
+main) ya que en una impresión, el usuario puede asignar sus propios márgenes o
+incluso quitarlos.&lt;/p&gt;
+
+&lt;p&gt;Agrego una clase &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;printable&lt;/code&gt; para ocultarla mientras se muestra en pantalla y
+hacerla visible en la impresión.&lt;/p&gt;
+
+&lt;p&gt;También elimino algunos elementos que no vale la pena tener en PDF, como videos,
+elementos interactivos e incluso ciertas secciones de la página como el header y
+footer entre otras.&lt;/p&gt;
+
+&lt;p&gt;Espero que esto te haya servido como introducción a los estilos de impresión, y
+me encantaría saber tus opiniones sobre esta capacidad de HTML y CSS en los
+navegadores modernos.&lt;/p&gt;
+
+&lt;p&gt;Adiós 👋🏽&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Ya me pasó" /><category term="Web" /><category term="HTML" /><summary type="html">Para crear PDF existen una gran variedad de herramientas; personalmente encuentro el uso de HTML y CSS sencillo, por lo que quiero mostrarte cómo hacer un PDF a partir de estos dos lenguajes de programación</summary></entry><entry xml:lang="es_MX"><title type="html">Como googlear</title><link href="https://halivert.dev/blog/2021/03/how-to-google/" rel="alternate" type="text/html" title="Como googlear" /><published>2021-03-13T11:31:00-06:00</published><updated>2021-03-13T11:31:00-06:00</updated><id>https://halivert.dev/blog/2021/03/how-to-google</id><content type="html" xml:base="https://halivert.dev/blog/2021/03/how-to-google/">&lt;p&gt;Googlear, es decir, buscar información con un buscador web (específicamente
+Google) no es una tarea trivial, y conforme pasa el tiempo se convierte en algo
+cada vez más difícil ya que hace falta criterio para encontrar lo que buscas.
+Sin embargo es una tarea escencial en el ámbito de la programación.&lt;/p&gt;
+
+&lt;!-- Seguir leyendo --&gt;
+
+&lt;h2 id=&quot;index&quot;&gt;Índice&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#start&quot;&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tips-n-tricks&quot;&gt;Tips ‘n tricks&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#filters&quot;&gt;Filtros&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#specific-domain&quot;&gt;Dominio específico&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#exclude-terms&quot;&gt;Excluir términos&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#images&quot;&gt;Imágenes&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#further-reading&quot;&gt;Lectura adicional&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;start&quot;&gt;Inicio&lt;/h2&gt;
+
+&lt;p&gt;Desafortunadamente para mi blog, recomendaré buscar las cosas en inglés, ya que
+generalmente encuentro información más actual y de mejor calidad que en español.&lt;/p&gt;
+
+&lt;p&gt;Para comenzar, podemos ir (a Google) y buscar justamente eso: «How to google»,
+los primeros resultados nos darán un brevario para dar inicio
+&lt;sup class=&quot;ref&quot;&gt;&lt;a href=&quot;https://support.google.com/websearch/answer/134479?hl=en&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;p&gt;Ahí se nos recomiendan 5 puntos, de los cuales destacaré 3:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Comienza con lo básico&lt;/strong&gt;: Formula una pregunta como se la harías a un amigo:
+&lt;em&gt;«How to declare a variable in JavaScript?»&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Elige bien tus palabras&lt;/strong&gt;: En lugar de buscar &lt;em&gt;«why my git is broken?»&lt;/em&gt;
+puedes escribir el error que te arroja la consola o el compilador, e.g.&lt;/p&gt;
+
+    &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dangling commit 1284e08f8bff6c...
+dangling blob fe8b00c48b6d...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;No te preocupes por insignificancias&lt;/strong&gt;: Tanto la ortografía como las
+mayúsculas y minúsculas no importan en las búsquedas, ya que Google corrige
+esto automáticamente al buscar&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Con eso ya debería ser suficiente para que no tengas que preguntar lo mismo una
+y otra vez en foros de ayuda (Busca primero, ¿recuerdas?
+&lt;sup class=&quot;ref&quot;&gt;&lt;a href=&quot;https://halivert.dev/blog/2021/02/how-to-ask/&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;)&lt;/p&gt;
+
+&lt;p&gt;Pero, que pasa si quieres mejorar la eficacia con la que buscas.&lt;/p&gt;
+
+&lt;h2 id=&quot;tips-n-tricks&quot;&gt;Tips &apos;n tricks&lt;/h2&gt;
+
+&lt;h3 id=&quot;filters&quot;&gt;Filtros&lt;/h3&gt;
+
+&lt;h4 id=&quot;specific-domain&quot;&gt;Dominio específico&lt;/h4&gt;
+
+&lt;p&gt;Utiliza &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;site:dominio.com&lt;/code&gt; para acotar los resultados a un dominio en
+específico. e.g.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;«how to center a div site:developer.mozilla.org»&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;«git fatal error … site:stackoverflow.com»&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;exclude-terms&quot;&gt;Excluir términos&lt;/h4&gt;
+
+&lt;p&gt;Utiliza &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt; frente a la palabra que desees excluir en tu búsqueda e.g.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;«snake python -animal»&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;«best programming languages -java»&lt;/em&gt; 😎&lt;/p&gt;
+
+&lt;h3 id=&quot;images&quot;&gt;Imágenes&lt;/h3&gt;
+
+&lt;p&gt;La búsqueda &lt;em&gt;por&lt;/em&gt; imagenes es bastante útil también, con ella puedes encontrar
+imágenes similares, sitios web donde está la imagen (o una similar) e incluso
+búsqueda de objetos en la misma imagen &lt;sup class=&quot;ref&quot;&gt;&lt;a href=&quot;https://support.google.com/websearch/answer/1325808&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; 🤯&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2021-03-how-to-google/reverse-image-search.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2021-03-how-to-google/reverse-image-search.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2021-03-how-to-google/reverse-image-search.png&quot; alt=&quot;Resultado del busqueda por imagen&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo cierto es que la búsqueda eficaz en Google y otros buscadores web te ahorrará
+varios dolores de cabeza y perdida de tiempo.&lt;/p&gt;
+
+&lt;p&gt;Espero que esto te haya servido, puedes encontrar más información en las
+siguientes fuentes:&lt;/p&gt;
+
+&lt;h3 id=&quot;further-reading&quot;&gt;Lectura adicional&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.to/denicmarko/google-like-a-pro-5cf6&quot;&gt;https://dev.to/denicmarko/google-like-a-pro-5cf6&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.google.com/websearch/answer/134479?hl=en&quot;&gt;https://support.google.com/websearch/answer/134479?hl=en&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://support.google.com/websearch/answer/2466433&quot;&gt;https://support.google.com/websearch/answer/2466433&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.coforge.com/blog/advanced-google-search-tips&quot;&gt;https://www.coforge.com/blog/advanced-google-search-tips&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adiós 👋🏽&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+Nota: Estos consejos son similares con otros buscadores web, como
+&lt;a href=&quot;https://duckduckgo.com&quot;&gt;DuckDuckGo&lt;/a&gt; (el que más utilizo), Bing u otros.
+&lt;/small&gt;&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Ya me pasó" /><category term="Google" /><category term="Principiantes" /><category term="Programación" /><summary type="html">Googlear, es decir, buscar información con un buscador web (específicamente Google) no es una tarea trivial, y conforme pasa el tiempo se convierte en algo cada vez más difícil ya que hace falta criterio para encontrar lo que buscas. Sin embargo es una tarea escencial en el ámbito de la programación.</summary></entry><entry xml:lang="es_MX"><title type="html">Cómo preguntar</title><link href="https://halivert.dev/blog/2021/02/how-to-ask/" rel="alternate" type="text/html" title="Cómo preguntar" /><published>2021-02-22T23:37:00-06:00</published><updated>2021-02-22T23:37:00-06:00</updated><id>https://halivert.dev/blog/2021/02/how-to-ask</id><content type="html" xml:base="https://halivert.dev/blog/2021/02/how-to-ask/">&lt;p&gt;¿Por qué es tan importante saber preguntar? Bueno, haciendo las preguntas
+adecuadas llegas más rápido a la respuesta que buscas.&lt;/p&gt;
+
+&lt;p&gt;Y primero lo primero, si algo hace falta a la hora de resolver problemas es
+entender precisamente &lt;strong&gt;cual es el problema&lt;/strong&gt;. Así que una vez identificado,
+tienes que preguntar…&lt;/p&gt;
+
+&lt;!-- Seguir leyendo --&gt;
+
+&lt;h1 id=&quot;primeros-pasos&quot;&gt;Primeros pasos&lt;/h1&gt;
+
+&lt;p&gt;Antes de preguntar piensa en quién puede darte respuestas. Está claro que
+aunque hagas una pregunta excelente, fracasará si no la haces a la persona
+adecuada.&lt;/p&gt;
+
+&lt;p&gt;Algo que me funciona bastante es preguntarme a mí mismo en voz alta, así puedes
+detectar redundancias y aunque, seguramente, no obtendrás una buena respuesta de
+ti misma, sí mejorarás la pregunta inicial.&lt;/p&gt;
+
+&lt;p&gt;Intenta que tu pregunta sea lo más concisa que puedas &lt;sup class=&quot;ref&quot;&gt;&lt;a href=&quot;https://stackoverflow.com/help/how-to-ask&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Stack Overflow recomienda que imagines que le estás
+hablando a personas muy ocupadas (y sorpresa, generalmente así será).&lt;/p&gt;
+
+&lt;p&gt;Además intenta no preguntar por preguntar &lt;sup class=&quot;ref&quot;&gt;&lt;a href=&quot;https://dontasktoask.com/&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, puedes
+ser directa y mencionar el problema que tienes. Tener modales es excelente, pero
+seguramente habrás recibido un mensaje de alguien que no te habla a menudo en el
+que solo te pregunta como estás… Sabes que después viene una pregunta y quizá
+por ello titubées en contestar, o de plano no lo hagas.&lt;/p&gt;
+
+&lt;h1 id=&quot;programación&quot;&gt;Programación&lt;/h1&gt;
+
+&lt;p&gt;Hablando específicamente de código y programación se recomienda que hayas hecho
+una investigación previa, puedes comenzar preguntandole a un buscador en
+Internet y seguramente encontrarás información valiosa que te ayude a comenzar
+la resolución de tu problema.&lt;/p&gt;
+
+&lt;p&gt;Si ya has investigado y de todas formas no puedes encontrar una solución, acude
+a foros de ayuda (discord, irc, stackoverflow), pero por favor intenta dar la
+mayor cantidad de información en el menor número de palabras posibles, si haces
+esto, seguro que alguien te va a ayudar.&lt;/p&gt;
+
+&lt;h1 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;No te canses de preguntar, y si no estás satisfecha con la respuesta, contiúa
+reformulando la pregunta inicial hasta que llegues a una solución. No es
+sencillo hacer buenas preguntas, pero con la practica seguro lo lograrás.&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Ya me pasó" /><category term="Preguntar" /><category term="Principiantes" /><summary type="html">¿Por qué es tan importante saber preguntar? Bueno, haciendo las preguntas adecuadas llegas más rápido a la respuesta que buscas. Y primero lo primero, si algo hace falta a la hora de resolver problemas es entender precisamente cual es el problema. Así que una vez identificado, tienes que preguntar…</summary></entry><entry xml:lang="es_MX"><title type="html">Sí, uso Dvorak</title><link href="https://halivert.dev/blog/2020/06/yep-i-use-dvorak/" rel="alternate" type="text/html" title="Sí, uso Dvorak" /><published>2020-06-28T00:26:00-05:00</published><updated>2020-06-28T00:26:00-05:00</updated><id>https://halivert.dev/blog/2020/06/yep-i-use-dvorak</id><content type="html" xml:base="https://halivert.dev/blog/2020/06/yep-i-use-dvorak/">&lt;p&gt;Desde Abril del 2016 (aproximadamente), me di cuenta que el teclado QWERTY no es
+la unica distribución que existe, y me dispuse a aprender a escribir en otra,
+Dvorak, que obtiene su nombre de su creador:
+August Dvorak&lt;!-- Seguir leyendo --&gt;, cuyo objetivo es disminuir los errores,
+aumentar la velocidad y reducir la fatiga ya que requiere menos movimientos de
+los dedos. &lt;sup class=&quot;ref&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dvorak_keyboard_layout&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Está optimizada para su uso en inglés, pero la variación en español solo tiene
+dos cambios, ya que se agrega la &lt;i&gt;ñ&lt;/i&gt; y la letra &lt;i&gt;h&lt;/i&gt; no se utiliza
+tanto cómo lo hace la &lt;i&gt;r&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, como los lenguajes de programación que utilizo se escriben en
+inglés, me decanté por la distribución en este idioma.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/dvorak.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/dvorak.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/dvorak.png&quot; alt=&quot;Distribución dvorak&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;velocidad&quot;&gt;Velocidad&lt;/h2&gt;
+
+&lt;p&gt;La velocidad al escribir generalmente se mide en un minuto y se considera que
+una palabra está conformada por 5 letras.&lt;/p&gt;
+
+&lt;p&gt;Usando QWERTY, comenzaba a medir mi velocidad en páginas como &lt;a href=&quot;https://10fastfingers.com/typing-test/english&quot;&gt;10fastfingers&lt;/a&gt;
+y con programas como &lt;a href=&quot;http://typespeed.sourceforge.net/&quot;&gt;typespeed&lt;/a&gt; pero lo cierto es que nunca llegué a ser
+demasiado rápido, y aunque escribía sin voltear a ver el teclado, solamente
+alcanzaba velocidades de 70 wps (palabras por minuto) y muchas veces me
+equivocaba.&lt;/p&gt;
+
+&lt;h3 id=&quot;cambio-a-dvorak&quot;&gt;Cambio a Dvorak&lt;/h3&gt;
+
+&lt;p&gt;Desde que comenzé a escribir con esta otra distribución me centré en la
+velocidad y el tratar de evitar los errores lo más que pudiera.&lt;/p&gt;
+
+&lt;p&gt;Actualmente escribo en promedio 80 wps y aunque tampoco es lo más rápido que me
+gustaría escribir, me siento cómodo con ello.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/score-typespeed.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/score-typespeed.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/score-typespeed.png&quot; alt=&quot;Puntuación typespeed&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+&lt;br /&gt;
+&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/score-10fastfingers.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/score-10fastfingers.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2020-06-yep-i-use-dvorak/score-10fastfingers.png&quot; alt=&quot;Puntuación 10fastfingers&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;facilidad&quot;&gt;Facilidad&lt;/h2&gt;
+
+&lt;p&gt;Llegar a esa velocidad no me fue sencillo, al principio tenía que visualizar en
+pantalla sobre que teclas estaban mis dedos ya que mi teclado no cambió
+físicamente, seguía teniendo las teclas en la distribución QWERTY, sin embargo
+con el tiempo y mucha práctica se me fue haciendo de lo más normal.&lt;/p&gt;
+
+&lt;h2 id=&quot;comodidad&quot;&gt;Comodidad&lt;/h2&gt;
+
+&lt;p&gt;En cuanto a ergonomía Dvorak es muy superior y eso es obvio en vista de que fue
+diseñado con el fin de facilitar la escritura en el, no complicarla, como lo fue
+en el caso de nuestra más conocida distribución.&lt;/p&gt;
+
+&lt;p&gt;Me gusta mucho que tiene las 5 vocales de un lado para que una sola mano se
+encarge de ellas y como resultado puedas alternar la escritura entre las dos
+llevando un buen ritmo.&lt;/p&gt;
+
+&lt;p&gt;En fin que hay que intentar cosas nuevas porque algunas de ellas son buenas.
+Espero que con esto te animes a escribir con la distribución Dvorak.&lt;/p&gt;
+
+&lt;p&gt;Adiós 👋🏽&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Divagando" /><category term="Teclado" /><category term="Distribución" /><category term="Dvorak" /><category term="QWERTY" /><summary type="html">Desde Abril del 2016 (aproximadamente), me di cuenta que el teclado QWERTY no es la unica distribución que existe, y me dispuse a aprender a escribir en otra, Dvorak, que obtiene su nombre de su creador: August Dvorak</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://halivert.dev/assets/2020-06-yep-i-use-dvorak/cover.png" /><media:content medium="image" url="https://halivert.dev/assets/2020-06-yep-i-use-dvorak/cover.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry xml:lang="es_MX"><title type="html">Tareas en cola, Laravel (Servidor compartido)</title><link href="https://halivert.dev/blog/2020/05/laravel-queue-shared-host/" rel="alternate" type="text/html" title="Tareas en cola, Laravel (Servidor compartido)" /><published>2020-05-31T00:50:00-05:00</published><updated>2020-05-31T00:50:00-05:00</updated><id>https://halivert.dev/blog/2020/05/laravel-queue-shared-host</id><content type="html" xml:base="https://halivert.dev/blog/2020/05/laravel-queue-shared-host/">&lt;p&gt;No quería demasiado retraso en las peticiones que enviaban un correo, así que
+decidí utilizar el &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;QUEUE_CONNECTION=database&lt;/code&gt; en el archivo de configuración
+(.env) y así comienza ese “largo” camino a usar una cola en Laravel para ciertas
+tareas que llevan poco más de 1 segundo, en este caso notificaciones.&lt;/p&gt;
+
+&lt;!-- Seguir leyendo --&gt;
+
+&lt;p&gt;Suponiendo que tenemos las notificaciones que deseamos utilizar, creamos las
+migraciones (en caso que no existan) para las tablas que utilizaremos para
+guardar las tareas en la cola (jobs) y las tareas fallidas (failed_jobs).&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php artisan queue:table
+php artisan queue:failed-table
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora tenemos que programar el inicio y reinicio (opcional) de la cola para que
+ejecute las tareas que guardamos ahí.&lt;/p&gt;
+
+&lt;p&gt;En nuestro archivo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app/Console/Kernel.php&lt;/code&gt; agregamos lo siguiente al método
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;schedule&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$schedule&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;queue:work --tries=3 --delay=5&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;everyMinute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;withoutOverlapping&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;runInBackground&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;appendOutputTo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;queue.log&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;queue.log&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Opcionalmente si queremos reinicar la cola cada 10 minutos&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$schedule&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;queue:restart&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;everyTenMinutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dentro del comando que ejecutamos le pedimos que intente cada tarea 3 veces en
+caso de fallar y que tarde 5 segundos antes de volverlo a intentar.&lt;/p&gt;
+
+&lt;p&gt;Además estamos pidiendo a Laravel que se ejecuten las tareas que están en la
+cola cada minuto (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;everyMinute&lt;/code&gt;) sin que se traslape con otro proceso que
+hayamos ejecutado (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;withoutOverlapping&lt;/code&gt;), además le pedimos que lo haga “tras
+bambalinas” (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runInBackground&lt;/code&gt;) para continuar con los demás procesos en el
+método schedule y que añada la salida a un archivo que obtenemos de la
+configuración (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;appendOutputTo&lt;/code&gt;), por defecto &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;queue.log&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ahora solo falta agregar los cronjobs correspondientes para que se ejecuten los
+procesos que definimos en este método.&lt;/p&gt;
+
+&lt;p&gt;Tecleando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;crontabs -e&lt;/code&gt; se abre el archivo donde agregaremos la siguiente línea.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* * * * * cd [ruta del proyecto] &amp;amp;&amp;amp; php artisan schedule:run &amp;gt;&amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y listo, nuestras tareas en cola comenzarán a ejecutarse cuando guardemos las
+crontabs.&lt;/p&gt;
+
+&lt;p&gt;Esto resulta particularmente útil para servidores compartidos en donde no puedes
+instalar cosas a tu antojo, por ejemplo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;supervisor&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Y nada, aquí están las fuentes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://laravel.com/docs/7.x/queues&quot;&gt;https://laravel.com/docs/7.x/queues&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://laravel.com/docs/7.x/scheduling&quot;&gt;https://laravel.com/docs/7.x/scheduling&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://laracasts.com/discuss/channels/laravel/free-queue-solution-for-shared-hosting&quot;&gt;https://laracasts.com/discuss/channels/laravel/free-queue-solution-for-shared-hosting&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Adiós 👋🏽&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Ya me pasó" /><category term="Laravel" /><category term="Host" /><category term="Servidor" /><summary type="html">No quería demasiado retraso en las peticiones que enviaban un correo, así que decidí utilizar el QUEUE_CONNECTION=database en el archivo de configuración (.env) y así comienza ese “largo” camino a usar una cola en Laravel para ciertas tareas que llevan poco más de 1 segundo, en este caso notificaciones.</summary></entry><entry xml:lang="es_MX"><title type="html">Atajos para Telegram Desktop</title><link href="https://halivert.dev/blog/2020/04/telegram-desktop-shortcuts/" rel="alternate" type="text/html" title="Atajos para Telegram Desktop" /><published>2020-04-04T12:30:00-06:00</published><updated>2020-04-04T12:30:00-06:00</updated><id>https://halivert.dev/blog/2020/04/telegram-desktop-shortcuts</id><content type="html" xml:base="https://halivert.dev/blog/2020/04/telegram-desktop-shortcuts/">&lt;p&gt;&lt;a href=&quot;https://telegram.org&quot;&gt;Telegram&lt;/a&gt;, seguramente habrás escuchado hablar de esta aplicación de
+mensajería instantánea, y en este post no me concentraré en porqué es mejor que
+otras aplicaciones, sino en porque me gusta utilizarla.&lt;/p&gt;
+
+&lt;!-- Seguir leyendo --&gt;
+
+&lt;p&gt;Una de las características que me resulta sumamente útil es que cuenta con una
+aplicación de escritorio la cual es muy fácil de usar y puedes descargar del
+sitio oficial.&lt;/p&gt;
+
+&lt;p&gt;Esta aplicación a su vez cuenta con algunos atajos de teclado y quiero hacer
+mención de algunos de ellos (si quieres puedes verlos todos &lt;a href=&quot;https://github.com/telegramdesktop/tdesktop/wiki/Keyboard-Shortcuts&quot;&gt;aquí&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;El primero es poder bloquear la sesión, para ello debes tener registrado un
+código de acceso, una vez que lo tienes puedes presionar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+l&lt;/code&gt; y pum, se
+bloquea la sesión instantáneamente.&lt;/p&gt;
+
+&lt;p&gt;Otro de ellos que tiene que ver con la ventana de la aplicación es &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+w&lt;/code&gt;, que
+la minimiza a la bandeja de notificaciones.&lt;/p&gt;
+
+&lt;p&gt;Una parte importante de enviar mensajes son los emojis, y Telegram Desktop es
+bastante amigable al respecto, no tienes que despegar las manos del teclado (si
+no quieres) para enviar emojis, y no lo considero 100 % un atajo de teclado,
+pero es bastante útil para comunicarse más rápido. Esto lo logras escribiendo el
+código del emoji que puedes consultar en &lt;a href=&quot;https://emojipedia.org&quot;&gt;emojipedia&lt;/a&gt;, estos son algunos de
+los que más uso.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Emoji&lt;/th&gt;
+      &lt;th&gt;Código&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;😌&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:relieved:&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;❤️&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:heart:&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;👍&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:+1:&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:thumbsup:&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;😔&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:pensive:&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;🙈&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:see_no_evil:&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Algo gratificante es que no tienes que escribir un código completo, muchas veces
+basta con escribir los primeros cuatro caracteres para que salga como sugerencia
+el emoji deseado. Ahora bien, si escribes el código completo, se sustituye
+automáticamente.&lt;/p&gt;
+
+&lt;p&gt;Y esos son mis tres atajos favoritos, aunque como mencionaba al principio, hay
+muchos más entre ellos, cambiar de mensajes, seleccionar un folder, dar estilo
+al texto, ir directamente a tus mensajes guardados (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+0&lt;/code&gt;), cerrar Telegram
+completamente, entre otros.&lt;/p&gt;
+
+&lt;p&gt;En fin, ¿ya usas Telegram Desktop? Dime cuales son tus atajos favoritos.
+Hasta pronto 👋🏽&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Divagando" /><category term="Telegram" /><category term="Atajos" /><summary type="html">Telegram, seguramente habrás escuchado hablar de esta aplicación de mensajería instantánea, y en este post no me concentraré en porqué es mejor que otras aplicaciones, sino en porque me gusta utilizarla.</summary></entry><entry xml:lang="es_MX"><title type="html">Convertir MP4 a GIF</title><link href="https://halivert.dev/blog/2019/11/mp4-to-gif/" rel="alternate" type="text/html" title="Convertir MP4 a GIF" /><published>2019-11-15T13:14:00-06:00</published><updated>2019-11-15T13:14:00-06:00</updated><id>https://halivert.dev/blog/2019/11/mp4-to-gif</id><content type="html" xml:base="https://halivert.dev/blog/2019/11/mp4-to-gif/">&lt;p&gt;En este post vamos a aprender a convertir un MP4 a GIF con dos sencillos
+pasos.&lt;/p&gt;
+
+&lt;h3 id=&quot;requisitos&quot;&gt;Requisitos&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://imagemagick.org&quot;&gt;ImageMagick&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ffmpeg.org&quot;&gt;FFmpeg&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;instrucciones&quot;&gt;Instrucciones&lt;/h3&gt;
+
+&lt;p&gt;&lt;a class=&quot;anchor&quot; name=&quot;Extra1Up&quot;&gt;&lt;/a&gt;
+Primero convertimos nuestro vídeo a imagenes. FFmpeg puede realizarlo con el
+siguiente comando:&lt;!-- Seguir leyendo --&gt;&lt;a href=&quot;https://halivert.dev/blog/2019/11/mp4-to-gif/#Extra1&quot;&gt;*&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; video.mp4 &lt;span class=&quot;nt&quot;&gt;-vf&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;fps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 frames/%03d.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Los fps determinan la velocidad de reproducción del gif, sugiero (5 ~ 6) para
+una reproducción similar a la del vídeo.&lt;/p&gt;
+
+&lt;p&gt;Después pegamos los frames juntos para hacer un gif,&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;convert frames/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; output.gif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a class=&quot;anchor&quot; name=&quot;Extra2Up&quot;&gt;&lt;/a&gt;
+Con eso tenemos listo nuestro gif, si te parece que es muy pesado, entonces
+puedes realizar el siguiente paso, optimizar el gif. &lt;a href=&quot;https://halivert.dev/blog/2019/11/mp4-to-gif/#Extra2&quot;&gt;*&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;convert output.gif &lt;span class=&quot;nt&quot;&gt;-fuzz&lt;/span&gt; 1% &lt;span class=&quot;nt&quot;&gt;-layers&lt;/span&gt; Optimize optimized.gif
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;extra&quot;&gt;Extra&lt;/h3&gt;
+
+&lt;p&gt;&lt;a class=&quot;anchor&quot; name=&quot;Extra1&quot;&gt;&lt;/a&gt;
+&lt;a href=&quot;https://halivert.dev/blog/2019/11/mp4-to-gif/#Extra1Up&quot;&gt;↑&lt;/a&gt; Para la parte de los nombres:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%03d.png&lt;/code&gt; debemos multiplicar los fps por la duración en segundos que dura el
+vídeo, así, sí es un vídeo de hasta 166 segundos (2 minutos y 46 segundos) y
+usas 6 fps, puedes utilizar el &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%03d.png&lt;/code&gt;, sin embargo si el vídeo es más
+grande, puede ser necesario cambiar los nombres por &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%04d.png&lt;/code&gt;, esto con el fin
+de que el ordenamiento sea adecuado.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;anchor&quot; name=&quot;Extra2&quot;&gt;&lt;/a&gt;
+&lt;a href=&quot;https://halivert.dev/blog/2019/11/mp4-to-gif/#Extra2Up&quot;&gt;↑&lt;/a&gt; El porcentaje de ‘fuzz’ determina en
+parte la calidad de tu gif optimizado, es por eso que utilizo el 1%, notarás que
+aumentando este porcentaje, la calidad bajará.&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Ya me pasó" /><category term="MP4" /><category term="GIF" /><category term="ImageMagick" /><category term="FFmpeg" /><summary type="html">En este post vamos a aprender a convertir un MP4 a GIF con dos sencillos pasos. Requisitos ImageMagick FFmpeg Instrucciones Primero convertimos nuestro vídeo a imagenes. FFmpeg puede realizarlo con el siguiente comando:</summary></entry><entry xml:lang="es_MX"><title type="html">Cómo utilizar rutas de Laravel en JS</title><link href="https://halivert.dev/blog/2019/11/laravel-js-routes/" rel="alternate" type="text/html" title="Cómo utilizar rutas de Laravel en JS" /><published>2019-11-03T20:24:00-06:00</published><updated>2019-11-03T20:24:00-06:00</updated><id>https://halivert.dev/blog/2019/11/laravel-js-routes</id><content type="html" xml:base="https://halivert.dev/blog/2019/11/laravel-js-routes/">&lt;p&gt;TL;DR Con un paquete&lt;br /&gt;
+&lt;a href=&quot;https://github.com/halivert/laravel-js-routes&quot;&gt;https://github.com/halivert/laravel-js-routes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Generalmente utilizamos JavaScript para el front-end de nuestras aplicaciones,
+si además empleamos &lt;a href=&quot;https://laravel.com&quot;&gt;Laravel&lt;/a&gt;, notaremos que incluye un módulo muy útil
+llamado Webpack Mix, que nos ayuda a preprocesar nuestros archivos JS.&lt;/p&gt;
+
+&lt;!-- Seguir leyendo --&gt;
+
+&lt;p&gt;Un problema surge cuando queremos acceder a las rutas que definimos en Laravel
+desde cualquier módulo de JS. Una de las soluciones más sencillas es exportar
+todas nuestras rutas a un JSON y después utilizar una función que tenga un
+comportamiento similar a la función &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;route&lt;/code&gt; de Laravel pero en JS.&lt;/p&gt;
+
+&lt;h3 id=&quot;código&quot;&gt;Código&lt;/h3&gt;
+&lt;p&gt;Para ello creé un comando de Laravel (se puede utilizar con &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php artisan&lt;/code&gt;)
+compuesto por lo siguiente:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Console\Command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Illuminate\Support\Facades\Route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateJSRoutesCommand&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Command&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;handle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;cm&quot;&gt;/*
+       * Cuando llamamos a nuestro comando, esto se ejecuta primero.
+       */&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;cm&quot;&gt;/*
+       * Crea un archivo con el nombre de $fileName y como contenido
+       * $contents, además pregunta si deseas sobreescribir el
+       * archivo en caso de que exista uno con el mismo nombre.
+       */&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;includeRoute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$routeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;cm&quot;&gt;/*
+       * Función que determina si una ruta debe incluirse o no en nuestro
+       * JSON, por defecto omite las rutas de &quot;telescope&quot;.
+       */&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getJSPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;cm&quot;&gt;/*
+       * Devuelve la ruta en donde se va a crear el nuevo archivo con las
+       * rutas y la función.
+       */&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;La función &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;handle&lt;/code&gt; es la que hace la mayor parte del trabajo, lo primero que
+haremos será obtener las rutas de Laravel, las filtramos y conservamos solo su
+URI.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$routes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nc&quot;&gt;Route&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getRoutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;getRoutesByName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;includeRoute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;uri&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$route&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uri&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;El contenido de nuestro archivo JS va a componerse del JSON y la función
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;route&lt;/code&gt; así que comenzamos agregando el nombre de la variable que usaremos y
+el contenido.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$jsonFlags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;JSON_PRETTY_PRINT&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;JSON_UNESCAPED_UNICODE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;const routes = &apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$content&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;json_encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$routes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$jsonFlags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$content&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Después construimos la función &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;route&lt;/code&gt; (en un archivo aparte)&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$content&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;file_get_contents&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;__DIR__&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;/../assets/js/routeFunction.js&apos;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// assets/js/routeFunction.js&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Esta funcion recibe un nombre de ruta y un arrreglo de parámetros.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;route&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;routeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Busca en las rutas guardadas la que tenga ese nombre y si no existe&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// arroja un error&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_route&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;routeName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_route&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Requested route doesn&apos;t exist&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// Si se encuentra una URI, reemplaza los parámetros con una RegEx&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// (no sé como la hice) y arroja otro error si faltan parámetros.&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Los parámetros que sobran son ignorados.&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matches&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/{&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[\w]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+}/g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requiredParametersCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requiredParametersCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Missing parameters&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;requiredParametersCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/{&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;[\w]&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;+}/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;extraParams&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hasOwnProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;RegExp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extraParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;extraParams&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Missing parameters&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;route&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Por último creamos el archivo.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$fileName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;app.jsroutes.name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;createFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$fileName&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; created&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;instalación&quot;&gt;Instalación&lt;/h3&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;composer require halivert/laravel-js-routes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;antes-de-usar&quot;&gt;Antes de usar&lt;/h3&gt;
+&lt;p&gt;Ya que hemos agregado el comando a Laravel, entonces lo ejecutamos con:&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php artisan route:tojs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Posterioremente debemos agregar el archivo a nuestro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.mix.js&lt;/code&gt;, para
+que sea procesado.&lt;/p&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;mix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;resources/js/routes&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;public/js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y después de un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn prod&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm prod&lt;/code&gt; podremos hacer uso de nuestra nueva
+función &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;route&lt;/code&gt;, cuando queramos llamar una ruta por su nombre en un archivo JS.&lt;/p&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;route&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./routes.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;uso&quot;&gt;Uso&lt;/h3&gt;
+&lt;p&gt;Ejemplos de uso:&lt;/p&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;axios&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;route&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;routeName&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;param1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;param2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Dudas al teléfono en pantalla 👋🏽&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Ya me pasó" /><category term="Laravel" /><category term="JavaScript" /><category term="Vue.js" /><category term="JSON" /><summary type="html">TL;DR Con un paquete https://github.com/halivert/laravel-js-routes Generalmente utilizamos JavaScript para el front-end de nuestras aplicaciones, si además empleamos Laravel, notaremos que incluye un módulo muy útil llamado Webpack Mix, que nos ayuda a preprocesar nuestros archivos JS.</summary></entry><entry xml:lang="es_MX"><title type="html">Select en Vue.js</title><link href="https://halivert.dev/blog/2019/10/vue-select/" rel="alternate" type="text/html" title="Select en Vue.js" /><published>2019-10-14T08:45:11-05:00</published><updated>2019-10-14T08:45:11-05:00</updated><id>https://halivert.dev/blog/2019/10/vue-select</id><content type="html" xml:base="https://halivert.dev/blog/2019/10/vue-select/">&lt;div class=&quot;notification is-yellow&quot;&gt;
+  &lt;p&gt;Este artículo fue escrito hace más de un año; en la actualidad
+utilizo la biblioteca &lt;a href=&quot;https://buefy.org/&quot;&gt;Buefy&lt;/a&gt;, que resulta más práctica y
+mejor implementada, sugiero utilizar dicha biblioteca con una capa de
+personalización, que no tiene que ser tan extrema como la planteada en este
+artículo y de la que escribiré pronto.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Si utilizas &lt;a href=&quot;https://vuejs.org&quot;&gt;Vue.js&lt;/a&gt; seguramente sabrás que hacer componentes genéricos es
+una de las mejores inversiones de tiempo. Escribes código una vez (en el mejor
+de los casos) y las siguientes solo lo reutilizas.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo crear un componente que funcione adecuadamente no siempre es
+sencillo, es por eso que escribo esta guía para hacer un select personalizado.&lt;/p&gt;
+
+&lt;!-- Seguir leyendo --&gt;
+
+&lt;p&gt;Lo primero que haremos es nombrar el componente. Según la &lt;a href=&quot;https://vuejs.org/v2/style-guide/#Base-component-names-strongly-recommended&quot;&gt;guía de estilo de
+Vue.js&lt;/a&gt; es recomendable nombrar los componentes de manera homogénea y se
+sugiere que tengan un prefijo específico, por ejemplo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Base&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;App&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;V&lt;/code&gt;, en
+mi caso nombro mis componentes base con el prefijo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;H&lt;/code&gt; y &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;B&lt;/code&gt; para los
+especificos del framework &lt;a href=&quot;https://bulma.io&quot;&gt;Bulma&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Creamos un componente para «envolver» el select. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HField&lt;/code&gt; que solo contiene
+información para el usuario.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b7d9ba492e87836298e1b03fbf41f26f.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Y ahora pasamos al select:&lt;/p&gt;
+
+&lt;p&gt;Su estructura general es la siguiente:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;template&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h-field&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;select&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;template&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;slot&amp;gt;&amp;lt;/slot&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/template&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/h-field&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/template&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Agregamos un nombre de referencia al &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HField&lt;/code&gt; para poder agregarle los errores
+en caso de que existan y también pasamos los datos que tienen que ver con
+ellos.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h-field&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;ref=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;field&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;label&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:errors=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;errors&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:display-errors=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;displayErrors&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:has-addons=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;hasAddons&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/h-field&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Nuestro select puede ser de tamaño completo y además puede tener errores. En
+bulma utilizamos un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;div&lt;/code&gt; para este fin.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;select&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{ &apos;is-fullwidth&apos;: isFullwidth, &apos;is-danger&apos;: errorsActive }&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Agregamos también el select y utilizaremos el &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-model&lt;/code&gt; para que nuestra
+selección se actualice en las dos direcciones (vista-modelo, modelo-vista). Y
+agregamos todos los atributos que se coloquen en la etiqueta del componente
+con &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-bind=&quot;$attrs&quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;selectedItem&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-bind=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;$attrs&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Tenemos una opción deshabilitada en donde colocaremos más información para el
+usuario, que además se elige por defecto.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;:value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;placeholderValue&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;disabled&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  {{ placeholder }}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y después agregamos todas las opciones que queremos que contenga nuestro
+select.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;v-for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(element, index) in elements&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;element[idProperty]&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:key=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;element[idProperty]&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  {{ element[displayProperty] }}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/option&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Utilizaremos el atributo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;idProperty&lt;/code&gt; porque nuestros datos pueden no ser
+homogéneos y también &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;displayProperty&lt;/code&gt; por la misma razón, en todo caso
+imprimimos los elementos y casi estamos listos para el script. Por último
+agregamos el espacio donde pueden ir (o no), algunos anexos.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;template&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;#addons&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;slot&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;addons&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/slot&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/template&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora sí pasamos al código del script. Importamos el componente que creamos
+hace unos momentos y después de exportar el nuevo componente (HSelect), y
+nombrarlo, evitaremos que el elemento padre &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h-field&lt;/code&gt; herede los atributos que
+se coloquen en su etiqueta.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HField&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./HField.vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;h-select&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;inheritAttrs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;components&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;HField&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Queremos saber si hay errores activos, cual es el elemento seleccionado y
+cuales son los elementos actuales, así los datos que tendrá nuestro componente
+son los siguientes:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;errorsActive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;selectedItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora vamos a «observar» 3 atributos y es aquí donde sucede algo importante
+en nuestro componente.&lt;/p&gt;
+
+&lt;p&gt;Lo primero es observar el &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;value&lt;/code&gt; esto lo hacemos porque si tenemos un
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-model&lt;/code&gt; asociado a nuestro componente, queremos que el valor cambie cuando
+actualizamos el modelo.&lt;/p&gt;
+
+&lt;p&gt;Después observamos el atributo que está conectado con nuestro select como su
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-model&lt;/code&gt;, queremos seleccionar el valor por defecto en caso de que no se
+encuentre el elemento. Por el contrario, si se encuentra, y es diferente al
+dato que pasamos como «viejo» escondemos los errores. Además, disparamos dos
+eventos, y esto es bastante importante, porque un select en Vue.js, dispara el
+evento “change” y también el evento “input”, con esto lograremos que si existe
+un &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v-model&lt;/code&gt; se actualice al realizar un cambio en nuestro select.&lt;/p&gt;
+
+&lt;p&gt;Por último observamos el atributo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;elements&lt;/code&gt; y así, cuando nuestros elementos
+cambien, tendremos control del elemento seleccionado.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectedItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;selectedItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;elementsContain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectedItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;placeholderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;old&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hideError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exists&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;elementsContain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;old&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectedItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;idProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectedItem&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exists&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;old&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;placeholderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando creamos el componente, queremos asignar los elementos y si existen
+errores, mostrarlos.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;created&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;elements&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initialElements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorsActive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Tenemos los métodos que nos ayudarán a ocultar errores, revisar si existe un
+elemento en nuestra lista y obtener el elemento seleccionado, además de uno
+que solo compara que el parámetro no sea &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;null&lt;/code&gt; ni &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;undefined&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;hideError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$refs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$refs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorsActive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;errorsActive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;elementsContain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;itemId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;itemId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;itemId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;placeholderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;idProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;itemId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;isSomething&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;getSelected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;idProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectedItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y por último tenemos las propiedades, que &lt;em&gt;grosso modo&lt;/em&gt; se ven así:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;initialElements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;old&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;hasAddons&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;placeholderValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;displayProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;idProperty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;displayErrors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;isFullwidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Boolean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Sin más aquí está el código del componente, queda mucho trabajo por hacer,
+pero sin duda simplifica mucho el trabajo de hacer un select en Laravel con
+Vue.js.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b34c22aa06007ead9b05df857e7ad1b6.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Este es un ejemplo de caso de uso.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h-select&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ __(&apos;areas.area&apos;) }}&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:initial-elements=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;@json($areas)&apos;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ __(&apos;areas.area&apos;) }}&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;display-property=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;area_id&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;old=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ old(&apos;area_id&apos;) }}&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;:errors=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;@json($errors-&amp;gt;get(&apos;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;area_id&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&apos;))&apos;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h-select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Podemos ver que asignar una etiqueta, elementos en forma de json, un
+placeholder, ademas de una seleccion previa o «vieja» y mostrar errores se
+vuelve mucho más sencillo.&lt;/p&gt;
+
+&lt;p&gt;Espero que este código te sea de ayuda.
+Adiós 👋🏽&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Ya me pasó" /><category term="Vue.js" /><category term="Select" /><summary type="html">Este artículo fue escrito hace más de un año; en la actualidad utilizo la biblioteca Buefy, que resulta más práctica y mejor implementada, sugiero utilizar dicha biblioteca con una capa de personalización, que no tiene que ser tan extrema como la planteada en este artículo y de la que escribiré pronto. Si utilizas Vue.js seguramente sabrás que hacer componentes genéricos es una de las mejores inversiones de tiempo. Escribes código una vez (en el mejor de los casos) y las siguientes solo lo reutilizas. Sin embargo crear un componente que funcione adecuadamente no siempre es sencillo, es por eso que escribo esta guía para hacer un select personalizado.</summary></entry><entry xml:lang="es_MX"><title type="html">Verificación en dos pasos</title><link href="https://halivert.dev/blog/2019/09/two-step-verification/" rel="alternate" type="text/html" title="Verificación en dos pasos" /><published>2019-09-25T12:02:00-05:00</published><updated>2019-09-25T12:02:00-05:00</updated><id>https://halivert.dev/blog/2019/09/two-step-verification</id><content type="html" xml:base="https://halivert.dev/blog/2019/09/two-step-verification/">&lt;p&gt;Muchos sistemas son realmente seguros. Hablando de redes sociales y sitios en
+donde tienes que escribir un usuario y contraseña para iniciar sesión podemos
+decir que la tecnología ha avanzado bien, en la mayoría de los casos (en los
+que no se guarda la contraseña como texto plano) es prácticamente imposible
+descifrarla (hasta ahora…).&lt;/p&gt;
+
+&lt;!-- Seguir leyendo --&gt;
+
+&lt;p&gt;Pero aún así, siguen existiendo los &lt;a href=&quot;https://dle.rae.es/?id=BBnPPfB&quot;&gt;crackers&lt;/a&gt;, y más aún, siguen teniendo
+éxito, ¿cómo es que hacen esto? Lo cierto es que no soy un experto en
+seguridad web, pero seguramente también habrás escuchado hablar sobre el
+phishing, veamos que es y cómo evitarlo.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;
+&lt;strong&gt;Nota:&lt;/strong&gt; La Wikipedia en inglés es algo confiable
+&lt;/small&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;phishing-&quot;&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Phishing&quot;&gt;Phishing&lt;/a&gt; 🎣&lt;/h4&gt;
+
+&lt;p&gt;Como su nombre lo dice, se trata de una técnica que busca hacer que caigas en
+un cebo, y esto lo intentan mediante mensajes que parecen provenir de fuentes
+seguras, pero que en realidad son todo lo contrario.
+Una vez que obtienen de ti preguntas y códigos de seguridad, pueden acceder a
+tu cuenta simulando que eres tú, y que olvidaste tus credenciales.&lt;/p&gt;
+
+&lt;h5 id=&quot;cómo-evitar-el-phishing&quot;&gt;¿Cómo evitar el phishing?&lt;/h5&gt;
+
+&lt;p&gt;Lo más importante es verificar las fuentes de donde proviene un mensaje o
+email, para esto, muchas veces hace falta únicamente revisar el correo
+electrónico o la cuenta que te envía el mensaje. Si ves correos como…&lt;/p&gt;
+
+&lt;div class=&quot;columns is-printable&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing1.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing1.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing1.png&quot; alt=&quot;Ejemplo de phishing: Bank of America&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing2.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing2.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing2.png&quot; alt=&quot;Ejemplo de phishing: iTunes&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;columns is-printable&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing3.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing3.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing3.png&quot; alt=&quot;Ejemplo de phishing: PayPal&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing4.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing4.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2019-09-two-step-verification/phishing4.png&quot; alt=&quot;Ejemplo de phishing: Microsoft&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Revisa el dominio y si, evidentemente no tienen que ver con la empresa a la
+que dicen pertenecer, entonces bórralos, y no hagas click en ningún vínculo de
+dicho correo.&lt;/p&gt;
+
+&lt;p&gt;Otra cosa que puede ayudarte es revisar los vínculos en los que haces click,
+los vínculos acortados que llegan por correo, generalmente son un mal indicio.&lt;/p&gt;
+
+&lt;p&gt;Queda algo más que hacer para no ser víctima de alguno de estos robos de
+cuentas o datos, puedes activar la &lt;strong&gt;verificación en dos pasos&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h6 id=&quot;verificación-en-dos-pasos&quot;&gt;Verificación en dos pasos&lt;/h6&gt;
+
+&lt;p&gt;Se trata de un método que hace necesario, además de introducir una contraseña,
+(que quizá te hayan robado con ayuda del phishing) introducir un código de
+seguridad que solo tú posees. (Es importante que no compartas dichos códigos
+con nadie, porque la verificación en dos pasos perdería toda su utilidad).&lt;/p&gt;
+
+&lt;p&gt;Algunas redes sociales te permiten usar aplicaciones móviles que generan
+códigos de un solo uso que se recargan automáticamente cada cierto tiempo (1
+minuto, 30 segundos) y que sirven como método para afirmar que eres tú quien
+está accediendo a tu cuenta, y no alguien que robó tu contraseña. Aplicaciones
+como &lt;a href=&quot;https://authy.com&quot;&gt;Authy&lt;/a&gt; o &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&quot;&gt;Google Authenticator&lt;/a&gt; sirven para estos fines. Otras
+aplicaciones web te ofrecen enviar un código a tu celular por medio de SMS.&lt;/p&gt;
+
+&lt;h4 id=&quot;conclusión&quot;&gt;Conclusión&lt;/h4&gt;
+
+&lt;p&gt;Mi recomendación personal es que actives la verificación en dos pasos de la
+mayoría de cuentas que tengas en Internet.&lt;/p&gt;
+
+&lt;p&gt;Redes sociales como Snapchat, Twitter e Instagram, cuentan con verificación en
+dos pasos, servicios de mensajería como Telegram y Whatsapp y otras
+aplicaciones web como Github, Heroku, Google y Outlook también cuentan con
+ella.&lt;/p&gt;
+
+&lt;p&gt;Es sencillo activar la verificación en dos pasos. Aquí muestro los nombres que
+tiene en Telegram, Twitter y Snapchat.&lt;/p&gt;
+
+&lt;div class=&quot;columns is-printable page-break-before&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2019-09-two-step-verification/telegram-2fa.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2019-09-two-step-verification/telegram-2fa.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2019-09-two-step-verification/telegram-2fa.png&quot; alt=&quot;Configuración de privacidad y seguridad de Telegram&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2019-09-two-step-verification/twitter-2fa.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2019-09-two-step-verification/twitter-2fa.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2019-09-two-step-verification/twitter-2fa.png&quot; alt=&quot;Configuración de verificación de inicio de sesión de Twitter&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://halivert.dev/assets/2019-09-two-step-verification/snapchat-2fa.png&quot;&gt;&lt;picture&gt;
+		&lt;source srcset=&quot;https://halivert.dev/assets/2019-09-two-step-verification/snapchat-2fa.webp&quot; type=&quot;image/webp&quot; /&gt;&lt;img src=&quot;https://halivert.dev/assets/2019-09-two-step-verification/snapchat-2fa.png&quot; alt=&quot;Ajustes de Snapchat (Autenticación de dos factores)&quot; /&gt;&lt;/picture&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hasta la próxima 👋🏽&lt;/p&gt;</content><author><name>{&quot;first_name&quot;=&gt;&quot;Halí&quot;, &quot;last_name&quot;=&gt;&quot;Velázquez&quot;, &quot;picture&quot;=&gt;&quot;/assets/img/halivert.png&quot;, &quot;kofi&quot;=&gt;&quot;https://ko-fi.com/halivert&quot;, &quot;email&quot;=&gt;{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}, &quot;description&quot;=&gt;&quot;Estudiando ingeniería en sistemas computacionales, su escuela lo ama tanto que no lo quiere dejar salir.&quot;, &quot;social&quot;=&gt;[{&quot;url&quot;=&gt;&quot;https://twitter.com/halivert&quot;, &quot;type&quot;=&gt;&quot;twitter&quot;, &quot;icon&quot;=&gt;&quot;fab fa-twitter&quot;, &quot;hidden&quot;=&gt;true}, {&quot;url&quot;=&gt;&quot;https://github.com/halivert&quot;, &quot;type&quot;=&gt;&quot;github&quot;, &quot;icon&quot;=&gt;&quot;fab fa-github&quot;}, {&quot;url&quot;=&gt;&quot;https://gitlab.com/halivert&quot;, &quot;type&quot;=&gt;&quot;gitlab&quot;, &quot;icon&quot;=&gt;&quot;fab fa-gitlab&quot;}, {&quot;url&quot;=&gt;&quot;https://discordapp.com/users/673717040095428628&quot;, &quot;type&quot;=&gt;&quot;discord&quot;, &quot;icon&quot;=&gt;&quot;fab fa-discord&quot;}, {&quot;url&quot;=&gt;&quot;https://www.linkedin.com/in/hal%C3%AD-vel%C3%A1zquez-1b87bb212/&quot;, &quot;type&quot;=&gt;&quot;linkedin&quot;, &quot;icon&quot;=&gt;&quot;fab fa-linkedin&quot;}, {&quot;url&quot;=&gt;&quot;https://www.instagram.com/halivert/&quot;, &quot;type&quot;=&gt;&quot;instagram&quot;, &quot;icon&quot;=&gt;&quot;fab fa-instagram&quot;, &quot;hidden&quot;=&gt;true}]}</name><email>{&quot;at&quot;=&gt;&quot;hi@halivert.dev&quot;, &quot;md5&quot;=&gt;&quot;ef78513325e3391167f441f930067fef&quot;}</email></author><category term="Divagando" /><category term="Seguridad" /><category term="Verificación" /><summary type="html">Muchos sistemas son realmente seguros. Hablando de redes sociales y sitios en donde tienes que escribir un usuario y contraseña para iniciar sesión podemos decir que la tecnología ha avanzado bien, en la mayoría de los casos (en los que no se guarda la contraseña como texto plano) es prácticamente imposible descifrarla (hasta ahora…).</summary></entry></feed>
